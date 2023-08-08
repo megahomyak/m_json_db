@@ -17,6 +17,6 @@ class Db:
             f.write(json.dumps(self.value, ensure_ascii=False))
 
     def __getattr__(self, attrname):
-        getattr(self.value, attrname)
+        return getattr(self.value, attrname)
 
 __all__ = ["Db"]
