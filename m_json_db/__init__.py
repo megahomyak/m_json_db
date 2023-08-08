@@ -12,7 +12,7 @@ class Db:
     def __enter__(self):
         pass
 
-    def __exit__(self):
+    def __exit__(self, *args):
         with open(self.path, "w", encoding="utf-8") as f:
             f.write(json.dumps(self.value, ensure_ascii=False))
 
