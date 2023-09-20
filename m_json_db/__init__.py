@@ -20,7 +20,7 @@ class Db:
         except FileNotFoundError:
             pass
 
-    def __exit__(self):
+    def __exit__(self, *extras):
         self.save()
 
     def __getitem__(self, key):
